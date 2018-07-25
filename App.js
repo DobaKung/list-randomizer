@@ -10,12 +10,17 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, ToolbarAndroid, View, ScrollView, StatusBar} from 'react-native';
 import FAB from 'react-native-fab';
 import Card from './Components/Card';
+import Prompt from './Components/Prompt';
 
 type Props = {};
 export default class App extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = { items: 1 };
+    this.ask = this.ask.bind(this);
+  }
+  ask() {
+    alert('Fuck you');
   }
   render() {
     return (
@@ -30,8 +35,9 @@ export default class App extends Component<Props> {
             <Card text="Item 3"/>
             <Text style={styles.note}>Shake to randomize</Text>
           </ScrollView>
-          <FAB buttonColor="#fdd835" iconTextColor="#000" onClickAction={() => {alert("FAB pressed")}} />
+          <FAB buttonColor="#fdd835" iconTextColor="#000" onClickAction={this.ask}/>
         </View>
+        <Prompt title="Item name" placeholder="Enter item name"/>
       </View>
     );
   }
