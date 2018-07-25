@@ -9,8 +9,7 @@
   "dependencies": {
     "react": "16.4.1",
     "react-native": "0.56.0",
-    "react-native-fab": "^1.0.7",
-    "react-native-prompt-android": "^0.3.3"
+    "react-native-fab": "^1.0.7"
   },
   "devDependencies": {
     "babel-jest": "23.4.0",

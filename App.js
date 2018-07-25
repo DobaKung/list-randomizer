@@ -20,7 +20,7 @@ export default class App extends Component<Props> {
     this.ask = this.ask.bind(this);
   }
   ask() {
-    alert('Fuck you');
+    alert('Fuck you!');
   }
   render() {
     return (
